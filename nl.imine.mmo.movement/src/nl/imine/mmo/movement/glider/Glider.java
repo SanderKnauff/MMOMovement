@@ -6,6 +6,7 @@
 package nl.imine.mmo.movement.glider;
 
 import nl.imine.mmo.movement.leap.Leap;
+import nl.makertim.MMOmain.PlayerStats;
 import nl.makertim.MMOmain.Skill;
 import nl.makertim.MMOmain.lib.MMOOutlaws;
 import nl.makertim.MMOmain.lib.SkillAction;

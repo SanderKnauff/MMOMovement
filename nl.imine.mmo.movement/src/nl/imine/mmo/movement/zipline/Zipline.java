@@ -14,6 +14,7 @@ package nl.imine.mmo.movement.zipline;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.util.ArrayList;
 import java.util.List;
 import nl.makertim.MMOmain.Skill;
 import nl.makertim.MMOmain.lib.MMOOutlaws;
@@ -45,6 +46,7 @@ public class Zipline extends SkillAction {
     private static List<ZiplineTask> ziplineList;
 
     public static void init() {
+        ziplineList = new ArrayList<>();
         MMOOutlaws.getInstance().addSkillHandler(Zipline.class);
     }
 
