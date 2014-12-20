@@ -1,0 +1,6 @@
+main: nl.imine.mmo.movement.MMOMove
+name: MMO_Movement
+version: 1.0.0
+author: Sansko1337
+depend: [IMINE_MMO_main]
+description: MMO_Movement Skilltree
