@@ -46,11 +46,13 @@ public class JumpKill extends SkillAction {
                     if (evt.getDamage() != 0) {
                         for (Entity E : evt.getEntity().getNearbyEntities(2, 2, 2)) {
                             if (E instanceof Player) {
-                                if (Mission.getMissionFromPlayer((Player) evt.getEntity()).equals(Mission.getMissionFromPlayer((Player) E))) {
-                                    double dmg = getWeaponDamage(((Player) evt.getEntity()).getItemInHand().getType());
-                                    dmg += evt.getDamage();
-                                    ((Player) E).damage(dmg, evt.getEntity());
-                                    evt.setCancelled(true);
+                                if (Mission.getMissionFromPlayer((Player) evt.getEntity()) != null) {
+                                    if (Mission.getMissionFromPlayer((Player) evt.getEntity()).equals(Mission.getMissionFromPlayer((Player) E))) {
+                                        double dmg = getWeaponDamage(((Player) evt.getEntity()).getItemInHand().getType());
+                                        dmg += evt.getDamage();
+                                        ((Player) E).damage(dmg, evt.getEntity());
+                                        evt.setCancelled(true);
+                                    }
                                 }
                             }
                         }

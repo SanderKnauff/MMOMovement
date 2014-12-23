@@ -30,6 +30,8 @@ import org.bukkit.util.Vector;
  */
 public class Zipline extends SkillAction {
 
+    public static final double DISMOUNT_MULTIPLIER = 1.5;
+    
     private static Plugin plugin;
 
     private static List<ZiplineTask> ziplineList;
@@ -63,7 +65,7 @@ public class Zipline extends SkillAction {
         if (zTask != null) {
             Vector v = zTask.getPully().getVelocity();
             zTask.detach();
-            E.getPlayer().setVelocity(v);
+            E.getPlayer().setVelocity(v.multiply(DISMOUNT_MULTIPLIER));
         }
 
     }
