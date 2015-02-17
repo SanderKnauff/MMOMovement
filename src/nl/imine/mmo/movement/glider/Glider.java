@@ -73,7 +73,7 @@ public class Glider extends SkillAction {
 
     @Override
     public void onInventoryClean(InventoryCleanupEvent ice) {
-        
+        ice.addItem(new KeyValuePair<Skill, ItemStack>(theSkill(), Refrence.customIS(Material.FEATHER, 1, "Hangglider", new String[]{ "Right Click in the air to activated!" }, null)));
     }
 
 }
